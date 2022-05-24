@@ -11,5 +11,5 @@
  * @return {number[]}
  */
 var inorderTraversal = function(root) {   
-    return root === null ? [] : [...inorderTraversal(root.left), root.val].concat(...inorderTraversal(root.right));    
+    return root === null ? [] : [...inorderTraversal(root.left), root.val, ...inorderTraversal(root.right)];    
 };
