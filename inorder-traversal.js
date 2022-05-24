@@ -10,10 +10,6 @@
  * @param {TreeNode} root
  * @return {number[]}
  */
-var inorderTraversal = function(root) {
-    if (root === null) {
-        return [];
-    }
-    
-    return [...inorderTraversal(root.left), root.val].concat(...inorderTraversal(root.right));    
+var inorderTraversal = function(root) {   
+    return root === null ? [] : [...inorderTraversal(root.left), root.val].concat(...inorderTraversal(root.right));    
 };
